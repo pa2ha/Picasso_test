@@ -3,7 +3,6 @@
 git clone git@github.com:pa2ha/Picasso_test.git
 cd Picasso_test
 ```
-# Как запустить Тесты
 
 Cоздать файл .env в корне проекта и заполнить его
 ```
@@ -17,6 +16,9 @@ POSTGRES_PASSWORD=mypass
 ```
 docker-compose up
 ```
+
+# Как запустить Тесты#
+
 ### После того как все контейнеры запустятся, открыть дополнительный терминал и выполнить в нём команду
 ```
 docker exec -it picasso_test-backend-1 python ./Picasso/manage.py test main.tests
