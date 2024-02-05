@@ -35,13 +35,13 @@ class ListFilesViewSetTestCase(TestCase):
 
     def test_list_files_success(self):
         File.objects.create(file='path/to/file.jpg')
-        response = self.client.get('/api/files/')  # Прямая ссылка на представление
+        response = self.client.get('/api/files/')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), 1)
 
     def test_list_files_empty(self):
-        response = self.client.get('/api/files/')  # Прямая ссылка на представление
+        response = self.client.get('/api/files/')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), 0)
